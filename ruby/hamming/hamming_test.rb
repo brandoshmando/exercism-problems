@@ -31,12 +31,10 @@ class HammingTest < MiniTest::Unit::TestCase
   end
 
   def test_large_hamming_distance
-    skip
     assert_equal 4, Hamming.compute('GATACA', 'GCATAA')
   end
 
   def test_hamming_distance_in_very_long_strand
-    skip
     assert_equal 9, Hamming.compute('GGACGGATTCTG', 'AGGACGGATTCT')
   end
 end
