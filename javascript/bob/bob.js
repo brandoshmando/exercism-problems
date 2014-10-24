@@ -6,13 +6,20 @@
 var Bob = function() {};
 
 Bob.prototype.hey = function(input) {
-  if (input.slice(-1) == '?'){
-    return "Sure."
-  }else if (input == input.toUpperCase()) {
-    return "Whoa, chill out!"
-  }else if (input.slice(-1) == '.'){
-    return "Whatever."
+  var response;
+  if (input == input.toUpperCase()){
+    return "Whoa, chill out!";
+  }else{
+    return punctuationChecker(input.slice(-1));
   }
-};
+
+  function punctuationChecker(punct){
+    if (punct == "!" || punct == "."){
+      return "Whatever."
+    }else if(punct == "?"){
+      return "Sure."
+    }
+  };
+}
 
 module.exports = Bob;
