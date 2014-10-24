@@ -6,19 +6,24 @@
 var Bob = function() {};
 
 Bob.prototype.hey = function(input) {
-  var response;
-  if (input == input.toUpperCase()){
+
+  if (input == input.toUpperCase() && numbers(input)){
     return "Whoa, chill out!";
   }else{
     return punctuationChecker(input.slice(-1));
   }
 
   function punctuationChecker(punct){
-    if (punct == "!" || punct == "."){
-      return "Whatever."
-    }else if(punct == "?"){
+
+    if(punct == "?"){
       return "Sure."
+    }else{
+      return "Whatever."
     }
+  };
+
+  function numbers(input){
+    return [".", "!", "?"].indexOf(input.slice(-1)) != -1
   };
 }
 
