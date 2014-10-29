@@ -20,23 +20,23 @@ class BobTests(unittest.TestCase):
             bob.hey('WATCH OUT!')
         )
 
-    # def test_asking_a_question(self):
-    #     self.assertEqual(
-    #         'Sure.',
-    #         bob.hey('Does this cryogenic chamber make me look fat?')
-    #     )
+    def test_asking_a_question(self):
+        self.assertEqual(
+            'Sure.',
+            bob.hey('Does this cryogenic chamber make me look fat?')
+        )
 
-    # def test_asking_a_numeric_question(self):
-    #     self.assertEqual(
-    #         'Sure.',
-    #         bob.hey('You are, what, like 15?')
-    #     )
+    def test_asking_a_numeric_question(self):
+        self.assertEqual(
+            'Sure.',
+            bob.hey('You are, what, like 15?')
+        )
 
-    # def test_talking_forcefully(self):
-    #     self.assertEqual(
-    #         'Whatever.',
-    #         bob.hey("Let's go make out behind the gym!")
-    #     )
+    def test_talking_forcefully(self):
+        self.assertEqual(
+            'Whatever.',
+            bob.hey("Let's go make out behind the gym!")
+        )
 
     # def test_using_acronyms_in_regular_speech(self):
     #     self.assertEqual(
